@@ -4,14 +4,14 @@ const Avatar = ({ mention, theme = {} }) => {
   if (mention.has('avatar')) {
     return (
       <img
-        src={mention.get('avatar')}
-        className={theme.mentionSuggestionsEntryAvatar}
+        src={ mention.get('avatar') }
+        className={ theme.mentionSuggestionsEntryAvatar }
         role="presentation"
       />
     );
   }
 
-  return null;
+  return <noscript />;
 };
 
 export default Avatar;
